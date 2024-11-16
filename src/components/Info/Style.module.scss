@@ -31,10 +31,10 @@
   width: 100%;
 
   @media (min-width: $screen-lg) {
-    margin-bottom: 0;
-    width: 60%;
-    padding-right: 10%;
     border-right: .1rem solid #424254;
+    margin-bottom: 0;
+    padding-right: 10%;
+    width: 60%;
   }
 }
 
@@ -43,8 +43,8 @@
   width: 100%;
 
   @media (min-width: $screen-lg) {
-    width: 30%;
     margin-left: 10%;
+    width: 30%;
   }
 }
 
@@ -73,32 +73,33 @@
   margin-top: 2rem;
 
   svg {
-    font-size: 2.5rem;
     color: $light;
+    font-size: 2.5rem;
   }
 }
 
 .list {
   display: flex;
-  gap: 4rem 1rem;
   flex-wrap: wrap;
+  gap: 4rem 1rem;
   margin-top: 3rem;
 }
 
 .item {
-  position: relative;
-  width: 10rem;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 10rem;
 
   svg {
-    position: absolute;
-    left: 2rem;
-    top: 1.5rem;
     color: $light;
     font-size: 5rem;
+    left: 2rem;
+    position: absolute;
+    top: 1.5rem;
   }
 
   &:nth-child(3),
@@ -111,16 +112,16 @@
 
 .circle {
   background: $gradient;
-  width: 4.4rem;
-  height: 6.5rem;
   border-radius: 5rem;
-  transform: rotate(-40deg);
+  height: 6.5rem;
   margin-left: 1rem;
+  transform: rotate(-40deg);
+  width: 4.4rem;
 }
 
 .name {
   color: $text-color;
   font-size: 2rem;
-  text-align: center;
   font-weight: 100;
+  text-align: center;
 }

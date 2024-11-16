@@ -19,6 +19,7 @@
   background-color: $bg1;
   display: flex;
   min-height: 100vh;
+  overflow: hidden;
   padding: 5rem 2rem;
 }
 
@@ -99,10 +100,10 @@
 }
 
 .images {
+  max-width: 35rem;
   order: -1;
   position: relative;
   width: 80%;
-  max-width: 35rem;
 
   @media (min-width: $screen-lg) {
     max-width: inherit;

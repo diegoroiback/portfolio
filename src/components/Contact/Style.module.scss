@@ -5,8 +5,9 @@
   align-items: center;
   background-color: $bg1;
   display: flex;
+  justify-content: center;
+  overflow: hidden;
   padding: 3rem 2rem;
-  justify-content: center
 }
 
 .email {

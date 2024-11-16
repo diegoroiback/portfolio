@@ -3,7 +3,7 @@ import styles from './Style.module.scss'
 const jobs = [
   {
     title: 'Que Impresión!',
-    text: 'Ayudante en centro de impresión, encargado de estampar, imprimir y diseñar.',
+    text: 'Ayudante en centro de impresión, encargado de ajustar diseños.',
     dates: '2014-2016'
   },
   {
