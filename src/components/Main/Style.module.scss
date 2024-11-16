@@ -1,0 +1,161 @@
+@import '@/styles/Main.scss';
+
+@keyframes mouseAnimation {
+  from {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1.3rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.main {
+  align-items: center;
+  background-color: $bg1;
+  display: flex;
+  min-height: 100vh;
+  padding: 5rem 2rem;
+}
+
+.container {
+  @include container;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  width: 100%;
+
+  @media (min-width: $screen-lg) {
+    width: 55%;
+  }
+}
+
+.name {
+  color: $light;
+  font-size: 3.2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.title {
+  @include title (
+    $min-size: 5rem,
+    $max-size: 10rem
+  );
+  hyphens: auto;
+  word-break: break-word;
+}
+
+.subtitle {
+  color: $light;
+  font-size: 3.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.btn {
+  background: transparent;
+  border: 0;
+  margin-top: 5rem;
+  position: relative;
+
+  &:hover {
+    .border {
+      opacity: .8;
+    }
+  }
+}
+
+.border {
+  border: .4rem solid $main-color;
+  border-radius: 3rem;
+  height: 5.5rem;
+  opacity: .5;
+  transition: opacity .5s;
+  width: 3rem;
+}
+
+.line {
+  animation: mouseAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  background: $main-color;
+  height: 1.5rem;
+  left: 1.25rem;
+  position: absolute;
+  top: 1rem;
+  width: .4rem;
+}
+
+.images {
+  order: -1;
+  position: relative;
+  width: 80%;
+  max-width: 35rem;
+
+  @media (min-width: $screen-lg) {
+    max-width: inherit;
+    order: 1;
+    width: 40%;
+  }
+}
+
+.icon {
+  background: $gradient;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: .7rem 0;
+  position: absolute;
+  transform: rotate(0);
+  transition: transform .5s;
+  width: 10%;
+  z-index: 2;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 1rem 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 1.5rem 0;
+  }
+
+  svg {
+    color: $bg1;
+    font-size: 1.5rem;
+
+    @media (min-width: $screen-md) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.email {
+  right: 0;
+  top: 0;
+}
+
+.linkedin {
+  bottom: 25%;
+  left: 0;
+}
+
+.github {
+  bottom: 12%;
+  left: 0;
+}

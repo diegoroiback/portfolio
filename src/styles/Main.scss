@@ -1,0 +1,40 @@
+// Variables
+$main-color: #16AAC8;
+$second-color: #9747FF;
+$bg1: #131318;
+$bg2: #0A0A0D;
+$light: #fff;
+$gradient: linear-gradient(148deg, $main-color 0%, $second-color 100%);
+$text-color: #dede;
+
+$screen-sm: 450px;
+$screen-md: 750px;
+$screen-lg: 1100px;
+
+// Mixins
+
+@mixin container {
+  margin: auto;
+  max-width: 120rem;
+  width: 100%;
+}
+
+@mixin title (
+  $min-size: 4rem,
+  $max-size: 6.4rem
+) {
+  background: $gradient;
+  background-clip: text;
+  background-size: 100%;
+  color: transparent;
+  font-size: clamp($min-size, 7vw, $max-size);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@mixin text {
+  color: $text-color;
+  font-size: 1.8rem;
+  font-weight: 100;
+}

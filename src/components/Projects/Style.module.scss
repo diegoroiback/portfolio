@@ -1,0 +1,131 @@
+@import '@/styles/Main.scss';
+
+
+.info {
+  align-items: center;
+  background-color: $bg2;
+  display: flex;
+  padding: 7rem 2rem;
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 16rem;
+    padding-top: 10rem;
+  }
+}
+
+.container {
+  @include container;
+  z-index: 1;
+}
+
+.title {
+  @include title;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
+
+  @media (min-width: $screen-sm) {
+    gap: 8rem 2rem;
+    margin-top: 12rem;
+  }
+}
+
+.item {
+  align-items: flex-start;
+  background-color: $bg1;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $screen-sm) {
+    max-width: 40rem;
+    width: 42%;
+
+    &:nth-child(odd) {
+      margin-top: -6rem;
+    }
+
+    &:nth-child(even) {
+      margin-bottom: -6rem;
+    }
+  }
+
+  .icon {
+    color: $light;
+    font-size: 5rem;
+    left: 2.5rem;
+    position: absolute;
+    top: 4rem;
+  }
+}
+
+.circle {
+  background: $gradient;
+  border-radius: 5rem;
+  height: 6.5rem;
+  margin-left: 1rem;
+  transform: rotate(-40deg);
+  width: 4.4rem;
+}
+
+.name {
+  color: $light;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 600;
+  width: 100%;
+}
+
+.text {
+  @include text;
+}
+
+.link {
+  align-items: center;
+  color: $light;
+  display: flex;
+  font-size: 2rem;
+  gap: .5rem;
+  padding: .3rem 1rem;
+  position: relative;
+  transition: gap .5s;
+  z-index: 1;
+
+  svg {
+    font-size: 1.5rem;
+  }
+
+  &::before {
+    background: $gradient;
+    border-radius: 2rem;
+    content: '';
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: width .5s;
+    width: 3.5rem;
+    z-index: -1;
+  }
+
+  &:hover {
+    gap: 1rem;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
