@@ -7,7 +7,7 @@ const Page404 = () => {
     useEffect(() => {
         router.push('/');
     }, [router]);
-    return (<HomePage />)
+    return (<Home />)
 };
 
 export default Page404;
